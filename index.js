@@ -81,16 +81,42 @@ console.log(calcularIMC(70,1.75).toFixed(2));
 console.log("Questão 12")
 function saudacao(nome,hora) {
 
-    if (hora >=6) {
-        console.log("Bom dia!, ");
-    } else if(hora >=13){
-        console.log("Boa Tarde!, ");
+    if (hora >=6 && hora < 12) {
+        return("Bom dia, "+nome+ "!" );
+    } else if(hora >=12){
+        return("Boa Tarde, "+nome+ "!");
     }else if(hora <=18)
-    console.log("Boa Noite!, ");
+    return("Boa Noite, "+nome+ "!");
 
-return
 }
-console.log(saudacao("Lucas",6))
+console.log(saudacao("Lucas",1))
 
 //Questão 13
 console.log("Questão 13")
+let pessoas = ["Ana", "Bruno", "Carlos", "Diana"];
+for (let nome of pessoas){
+    console.log(nome);
+}
+
+//Questão 14
+console.log("Questão 14")
+let soma = 0;
+let numeros = [10, 20, 30, 40, 50];
+
+for (let numero of numeros) {
+    soma = soma + numero;
+}
+console.log(soma);
+
+
+//Questão 15
+console.log("Questão 15")
+function filtrarPares(numeros) {
+    let pares = [];
+for(let numero of numeros ){
+    if (numero % 2 === 0){
+    pares.push(numero);}
+}
+   return pares;
+}
+console.log(filtrarPares([1, 2, 3, 4, 5, 6, 7, 8 ,9 ,10]))
